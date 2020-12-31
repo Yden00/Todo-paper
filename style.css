@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Nunito;
+    src: url(./assets/fonts/Nunito-Regular.ttf);
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: Nunito;
+    margin: 0;
+    color: #292D42;
+  }
+  
+  html,
+  #root {
+    height: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: 2fr 17fr 1fr;
+  }
+
+  header {
+      background-color: #F4F4F7;
+  }
+
+  h1 {
+      color: #8E919C;
+  }
+
+  .logo-img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  main {
+    background-color: #E8E9EE;
+  }
+
+  footer {
+      background-color: #EBECF1;
+  }
