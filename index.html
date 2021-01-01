@@ -13,26 +13,76 @@
             <h1>TODO</h1>
         </div>
         <div class="account">
-            <span class="user">Привет, Влад</span>
-            <button class="log-out">Logout</button>
+            <span class="user">Hello, Vlad</span>
+            <button class="logout">Logout</button>
         </div>
     </header>
     <main>
-        <div class="filter">
-            <div class="search-bar">
-                <input class="search-input" type="text">
-                <button class="find">Find</button>
-            </div>
-            <div class="date-bar">
-                <label for="date-input">Filter:</label>
-                <input class="date-input" type="date">
-            </div>
+        <div class="registration-page">
+            <h1>TODO</h1>
+            <form class="registration-form">
+            <a href="">Login</a>
+            </form>
         </div>
-        <div class="planned-container">
-            <ul class="planned-list"></ul>
+        <div class="registration-page">
+         <form class="login-form">
+            <a href="">Registration</a>
+         </form>
         </div>
-        <div class="completed-container">
-            <ul class="completed-list"></ul>
+        <div class="main-page">
+            <div class="list-headers">
+            <h3>Planned Tasks</h3>
+            <h3>Completed Tasks</h3>
+            </div>
+            <div class="tasks">
+            <div class="filter">
+                <div class="search-bar">
+                    <input class="search-input" type="text" placeholder="Task search...">
+                    <button class="find">Find</button>
+                </div>
+                <div class="date-bar">
+                    <label for="date-input" data-content="Filter:">Filter:</label>
+                    <input class="date-input" name="date" type="date" placeholder="Date of creation">
+                </div>
+            </div>
+            <div class="planned-container">
+                <ul class="planned-list">
+                    <li class="planned-task">
+                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
+                        <label for="task-checkbox">Подготовится к сессии</label>
+                        <div>
+                            <img src="./assets/icons/create-white-18dp.svg" alt="edit">
+                            <img src="./assets/icons/delete-white-18dp.svg" alt="delete">
+                        </div>
+                    </li>
+                    <li class="planned-task">
+                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
+                        <label for="task-checkbox">Сделать Таску</label>
+                        <div>
+                            <img src="./assets/icons/create-white-18dp.svg" alt="edit">
+                            <img src="./assets/icons/delete-white-18dp.svg" alt="delete">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="completed-container">
+                <ul class="completed-list">
+                    <li class="completed-task">
+                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
+                        <label for="task-checkbox">Поиграть в доту</label>
+                    </li>
+                    <li class="completed-task">
+                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
+                        <label for="task-checkbox">Посмотреть аниме</label>
+                    </li>
+                </ul>
+            </div>
+            
+            </div>
+            <div class="add-task">
+            <input type="text" placeholder="Enter task">
+            <button><img src="./assets/icons/add-white-18dp.svg" alt="add"></button>
+            </div>
         </div>
     </main>
     <footer>

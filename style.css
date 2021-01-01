@@ -7,7 +7,9 @@
     box-sizing: border-box;
     font-family: Nunito;
     margin: 0;
+    padding: 0;
     color: #292D42;
+    outline: none;
   }
   
   html,
@@ -25,8 +27,26 @@
     grid-template-rows: 2fr 17fr 1fr;
   }
 
+  .registration-form {
+    display: none;
+  }
+
+  .login-form {
+    display: none;
+  }
+
   header {
-      background-color: #F4F4F7;
+    display: flex;
+    padding: 3vh 3vw;
+    background-color: #F4F4F7;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11vw;
   }
 
   h1 {
@@ -34,14 +54,200 @@
   }
 
   .logo-img {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 4rem;
   }
 
-  main {
+  .account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11vw;
+  }
+
+  .user {
+      font-weight: 700;
+  }
+
+  .logout {
+    width: 80px;
+    height: 30px;
+    color: #ffffff;
+    background-color: #F4BF4A;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+
+  .main-page {
+    display: flex;
+    flex-direction: column;
     background-color: #E8E9EE;
+    padding: 5vh 3vw 11vh 3vw;
+    height: 100%;
+  }
+
+  .list-headers {
+    display: flex;
+    padding-left: 34.5vw;
+    justify-content: space-between;
+  }
+
+  .tasks{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+   }
+
+  .filter , .planned-container , .completed-container {
+    width: 25vw;
+  }
+  .list-headers h3{
+    width: 25vw;
+  }
+
+  .filter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 40vh;
+  }
+
+  .search-input {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    border: none;
+    padding:10px;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .find {
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background-color: #A25FCE;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .date-input {
+    width: 200px;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    border-radius: 15px;
+  }
+
+  .date-bar label {
+    font-weight: 600;
+  }
+
+  .planned-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    height: 100%;
+  }
+
+  .planned-task {
+    display: flex;
+    height: 6vh;
+    background-color: #ffffff;
+    border-radius: 15px;
+    align-items: center;
+    padding: 15px 30px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .planned-task:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    cursor: pointer;
+  }
+
+  .completed-task {
+    display: flex;
+    height: 6vh;
+    background-color: #ffffff;
+    border-radius: 15px;
+    align-items: center;
+    padding: 15px 30px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .completed-task label {
+    display: block;
+    padding-right: 150px;
+  }
+
+  .completed-task:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    cursor: pointer;
+  }
+
+  .task-checkbox {
+    width: 2em;
+    height: 2em;
+    background-color: #E8E9EE;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .task-checkbox:checked {
+    background-color: #69C480;
+  }
+
+  .add-task {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .planned-task img {
+    border-radius: 50%;
+    background-color: #9496A0;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .add-task input {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    border: none;
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .add-task button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background-color: #69C480;
+    cursor: pointer;
+  }
+
+  .add-task button img {
+    width: 50px;
+    height: 50px;
   }
 
   footer {
-      background-color: #EBECF1;
+    display: flex;
+    background-color: #EBECF1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40vw 0 40vw;
   }
