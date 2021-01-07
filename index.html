@@ -7,31 +7,29 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body id='root'>
-    <header>
+    <header id="header">
         <div class="logo">
             <img src="./assets/icons/datamola.0017dd5175903253e21f.svg" alt="Logo" class="logo-img">
             <h1>TODO</h1>
-        </div>
-        <div class="account">
-            <span class="user">Hello, Vlad</span>
-            <button class="logout">Logout</button>
         </div>
     </header>
     <main>
             <div class="registration-page">
                 <form class="registration-form">
-                    <a href="">Login</a>
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Repeat password">
+                    <a class="log-link" href="">Login</a>
+                    <input minlength="5" id="login" type="text" placeholder="Username">
+                    <input minlength="5" id="password" type="password" placeholder="Password">
+                    <input id="repeatPassword" type="password" placeholder="Repeat password">
+                    <p class="error-reg">Passwords doesn't match!!!</p>
                     <button type="submit">Register</button>
                 </form>
             </div>
             <div class="login-page">
                 <form class="login-form">
-                    <a href="">Registration</a>
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
+                    <a class="reg-link" href="">Registration</a>
+                    <input id="login" type="text" placeholder="Username">
+                    <input id="password" type="password" placeholder="Password">
+                    <p class="error-log">Incorrect Login or Password!!!</p>
                     <button type="submit">Enter</button>
                 </form>
             </div>
@@ -41,53 +39,28 @@
             <h3>Completed Tasks</h3>
             </div>
             <div class="tasks">
-            <div class="filter">
+            <div id="filter" class="filter">
                 <div class="search-bar">
                     <input class="search-input" type="text" placeholder="Task search...">
                     <button class="find">Find</button>
                 </div>
+                <button class="undo-btn">Undo</button>
                 <div class="date-bar">
                     <label for="date-input" data-content="Filter:">Filter:</label>
                     <input class="date-input" name="date" type="date" placeholder="Date of creation">
                 </div>
             </div>
             <div class="planned-container">
-                <ul class="planned-list">
-                    <li class="planned-task">
-                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
-                        <label for="task-checkbox">Подготовится к сессии</label>
-                        <div>
-                            <img src="./assets/icons/create-white-18dp.svg" alt="edit">
-                            <img src="./assets/icons/delete-white-18dp.svg" alt="delete">
-                        </div>
-                    </li>
-                    <li class="planned-task">
-                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
-                        <label for="task-checkbox">Сделать Таску</label>
-                        <div>
-                            <img src="./assets/icons/create-white-18dp.svg" alt="edit">
-                            <img src="./assets/icons/delete-white-18dp.svg" alt="delete">
-                        </div>
-                    </li>
-                </ul>
+                <ul id="planned-list" class="planned-list"></ul>
             </div>
             <div class="completed-container">
-                <ul class="completed-list">
-                    <li class="completed-task">
-                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
-                        <label for="task-checkbox">Поиграть в доту</label>
-                    </li>
-                    <li class="completed-task">
-                        <input type="checkbox" class="task-checkbox" name="task-checkbox" value="task-checkbox">
-                        <label for="task-checkbox">Посмотреть аниме</label>
-                    </li>
-                </ul>
+                <ul id="completed-list" class="completed-list"></ul>
             </div>
             
             </div>
             <div class="add-task">
-            <input type="text" placeholder="Enter task">
-            <button><img src="./assets/icons/add-white-18dp.svg" alt="add"></button>
+            <input minlength="5" class="input-task" type="text" placeholder="Enter task">
+            <button class="add-btn"><img src="./assets/icons/add-white-18dp.svg" alt="add"></button>
             </div>
         </div>
     </main>
@@ -96,4 +69,12 @@
         <p>vladtett2000@gmail.com</p>
     </footer>
 </body>
+<script src="./src/views/FilterView.js"></script>
+<script src="./src/views/HeaderView.js"></script>
+<script src="./src/views/TasksView.js"></script>
+<script src="./src/views/CompletedTasksView.js"></script>
+<script src="./src/models/Task.js"></script>
+<script src="./src/models/TasksList.js"></script>
+<script src="./src/controlers/events.js"></script>
+<script src="./src/controlers/TaskController.js"></script>
 </html>

@@ -1,0 +1,4 @@
+class FilterView {
+    constructor(){}
+    display(){}
+}
